@@ -30,11 +30,11 @@ export function Comment({ content, onDeleteComment }: CommentProps) {
                     <header>
                         <div className={styles.authorAndTime}>
                             <strong>Lucas Mikó</strong>
-                            <time title='14 de Agosto às 12:00h' dateTime='2023-05-14 12:00:00'>Cerca de 1h atrás</time>
+                            <time title='August 14th at 12:00 PM' dateTime='2023-05-14 12:00:00'>Cerca de 1h atrás</time>
 
                         </div>
 
-                        <button onClick={deleteComment} title='Deletar comentário'>
+                        <button onClick={deleteComment} title='Delete comment'>
                             <Trash size={24}/>
                         </button>
                     </header>
@@ -43,7 +43,7 @@ export function Comment({ content, onDeleteComment }: CommentProps) {
                 <footer>
                     <button onClick={likeComment}>
                         <ThumbsUp size={20} />
-                        Apludir <span>{likeCount}</span>
+                        Applaud <span>{likeCount}</span>
                     </button>
                 </footer>
             </div>

@@ -1,5 +1,5 @@
 import { format, formatDistanceToNow } from 'date-fns';
-import ptBR from 'date-fns/locale/pt-BR';
+import enUS from 'date-fns/locale/en-US';
 import { Avatar } from './Avatar';
 import { Comment } from './Comment';
 import styles from './Post.module.css'
@@ -36,10 +36,10 @@ export function Post({ post }: PostPros) {
 
     const [newCommentText, setNewCommentText] = useState('')
 
-    const publishedDateFormatted = format(post.publishedAt, "d 'de' LLLL 'às' HH:mm'h'", { locale: ptBR, });
+    const publishedDateFormatted = format(post.publishedAt, "d 'de' LLLL 'às' HH:mm'h'", { locale: enUS, });
 
     const publishedDateRelativeToNow = formatDistanceToNow(post.publishedAt, {
-        locale: ptBR,
+        locale: enUS,
         addSuffix: true
     });
 
@@ -55,7 +55,7 @@ export function Post({ post }: PostPros) {
     }
 
     function newCommentInvalid(event: InvalidEvent<HTMLTextAreaElement>) {
-        event.target.setCustomValidity('Este campo é obrigatório!')
+        event.target.setCustomValidity('This field is required!')
     }
 
     function deleteComment(commentToDelete: string) {
@@ -85,22 +85,22 @@ export function Post({ post }: PostPros) {
                     if (item.type == 'paragraph') {
                         return <p key={item.content}>{item.content}</p>;
                     } else if (item.type == 'link') {
-                        return <p key={item.content}><a href='#'>{item.content}</a></p>
+                        return <p key={item.content}><a href={`https://www.${item.content}`}>{item.content}</a></p>
                     }
                 })}
             </div>
 
             <form onSubmit={createNewComment} className={styles.commentForm}>
-                <strong>Deixe seu feedback</strong>
+                <strong>Leave your feedback</strong>
                 <textarea 
                 name='comment'
-                placeholder='Deixe um comentário'
+                placeholder=''
                 value={newCommentText}
                 onChange={newCommentChange}
                 onInvalid={newCommentInvalid}
                 required/>
                 <footer>
-                    <button type="submit" disabled={isNewCommentEmpty}>Publicar</button>
+                    <button type="submit" disabled={isNewCommentEmpty}>Publish</button>
                 </footer>
             </form>
 

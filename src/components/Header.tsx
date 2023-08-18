@@ -6,7 +6,7 @@ console.log(igniteLogo)
 export function Header() {
     return (
         <header className={styles.header}>
-            <img src={igniteLogo} alt="Logo do Ignite" />
+            <img src={igniteLogo} alt="React Feed Logo" />
         </header>
     );
 }

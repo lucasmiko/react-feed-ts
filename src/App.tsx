@@ -14,7 +14,7 @@ const posts: PostType[] = [
     content: [
       { type: 'paragraph', content: 'Hey, everyone! 👋'},
       { type: 'paragraph', content: "I've just uploaded another project to my portfolio. It's a project I created during Ignite. The project's name is React Feed 🚀"},
-      { type: 'link', content: 'lucasmiko.github.io/reactfeed'}
+      { type: 'link', content: 'github.com/lucasmiko'}
     ],
     publishedAt: new Date('2023-08-15T21:26:00')
   },
@@ -28,7 +28,7 @@ const posts: PostType[] = [
     content: [
       { type: "paragraph", content: "Hello everyone! 👋 I've got some exciting news." },
       { type: "paragraph", content: "I'm thrilled to share my latest project, which I built during the CodeCrafters Hackathon. The project is called EcoTracker 🌱." },
-      { type: "link", content: "www.samsimoes.dev/ecotracker" }
+      { type: "link", content: "linkedin.com/in/leonardoasousa/" }
     ],
     publishedAt: new Date('2023-08-14T23:30:00')
   },
@@ -42,7 +42,7 @@ const posts: PostType[] = [
     content: [
       { type: "paragraph", content: "Hi folks! 👋 Exciting update from the product team." },
       { type: "paragraph", content: "We've just launched a new feature-rich app, KitchenPal 🍳, designed to make cooking a breeze. Check out all the cool functionalities!" },
-      { type: "link", content: "www.emersons2.pm/kitchenpal" }
+      { type: "link", content: "linkedin.com/in/emersondevpro/" }
     ],
     publishedAt: new Date('2023-08-13T10:45:00')
   },
@@ -56,7 +56,7 @@ const posts: PostType[] = [
     content: [
       { type: "paragraph", content: "Hey there! 👋 Big news in the app development world." },
       { type: "paragraph", content: "I'm excited to introduce my latest creation, FitTrack 🏃‍♂️, a fitness tracking app with real-time analytics. It's now available for download!" },
-      { type: "link", content: "www.joaohcrangel.dev/fittrack" }
+      { type: "link", content: "linkedin.com/in/joaohcrangel/" }
     ],
     publishedAt: new Date('2023-08-10T14:20:00')
   }
